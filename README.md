@@ -1,10 +1,10 @@
-# Audiobook Convert
+# Audiobook Convert - Manjaro-friendly
 A shell script to convert mp3 to m4b files.
 
 ## Dependencies
 `audiobook-convert` uses `ffmpeg` and `rename`. For ffmpeg, make sure you have access to `libfdk_aac`.
 ```shell
-brew install rename ffmpeg --with-fdk-aac
+sudo pikaur -Syu ffmpeg-libfdk_aac
 ```
 
 ## Instructions
