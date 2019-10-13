@@ -9,7 +9,7 @@ output_file="output/output.mp3"
 mkdir -p input
 mkdir -p output
 
-echo "${green}Combining the following audiobook parts: ${reset}"
+echo -e "${green}Combining the following audiobook parts: ${reset}"
 for audiobook in input/*.mp3; do
 	# get audiobook name without the input prefix
 	name="${audiobook#"input/"}"
@@ -24,26 +24,27 @@ for audiobook in input/*.mp3; do
 		parts="$parts|${audiobook}"
 	fi
 
-	echo "${name}"
+	echo -e "${name}"
 	(( i++ ))
 done
 
-echo "${green}Ready to combine and convert to m4b (y/n)? ${reset}"
+echo -e "${green}Ready to combine and convert to m4b (y/n)? ${reset}"
 read response
-if echo "$response" | grep -iq "^y" ;
+if echo -e "$response" | grep -iq "^y" ;
 then
 	echo "${green}Combining audiobook parts... ${reset}"
 	ffmpeg -i concat:"${parts}" -acodec copy output/output.mp3
 
 	if [ -f "$output_file" ]
 	then
-		echo "${green}Converting mp3 to m4a... ${reset}"
-		ffmpeg -i "${output_file}" -c:a libfdk_aac "output/${filename}-converted.m4a"
+		echo -e "${green}Converting mp3 to m4a... ${reset}"
+		ffmpeg -i "${output_file}" -c:a libfdk_aac -c:v copy "output/${filename}-converted.m4a"
 		if [[ -f "output/${filename}-converted.m4a" ]]; then
-			echo "${green}Renaming .m4a to .m4b... ${reset}"
+			echo -e "${green}Renaming .m4a to .m4b... ${reset}"
 			rm -rf ${output_file}
-			cd output/ && rename -s m4a m4b *
-			say -v "Vicki" Finished
+			cd output/ && rename m4a m4b *
+			mp4file --optimize *.m4b
+			echo "done"
 		fi
 	fi
 fi
