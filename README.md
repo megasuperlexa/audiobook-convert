@@ -17,5 +17,7 @@ git clone https://github.com/megasuperlexa/audiobook-convert
 2. Running the script.
 
 Move all `.mp3` files to be combined and converted into `input/` and from the root folder of the repository, run:
-
-` sh convert.sh`
+```shell 
+sudo chmod +x convert.sh 
+./convert.sh
+```
