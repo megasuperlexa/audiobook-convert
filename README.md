@@ -11,8 +11,7 @@ sudo pikaur -Syu ffmpeg-libfdk_aac
 1. Clone the repo.
 
 ```shell
-git clone git@github.com:kjunggithub/audiobook-convert.git
-cd audiobook-convert
+git clone https://github.com/megasuperlexa/audiobook-convert
 ```
 
 2. Running the script.
