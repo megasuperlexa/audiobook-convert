@@ -25,7 +25,7 @@ sudo chmod +x convert.sh
 
 ## How do I load my book to iPhone?
 
-I used to dual-boot to Windows and deal with iTunes and iBooks, which is not a pleasant experience, and sometimes iBooks for unknown reason just won't play my book. Here's 100% Linux-friendly way (which doesnt require iTunes and wires at all):
+I used to dual-boot to Windows and deal with iTunes and iBooks, which is not a pleasant experience, and sometimes, for unknown reason, iBooks just won't play my book properly. Here's 100% Linux-friendly way (which doesnt require iTunes and wires at all):
 
 1. Send the m4b file to yourself via Telegram messenger (Saved Messages)
 2. On the device, install BookPlayer from AppStore. This is the nicest audiobook player I've seen, completely free and opensource: https://github.com/TortugaPower/BookPlayer
