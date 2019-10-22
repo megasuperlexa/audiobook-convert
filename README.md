@@ -29,4 +29,4 @@ I used to dual-boot to Windows and deal with iTunes and iBooks, which was not a 
 
 1. Send the m4b file to yourself via Telegram messenger (Saved Messages)
 2. On the device, install BookPlayer from AppStore. This is the nicest audiobook player I've seen, completely free and opensource: https://github.com/TortugaPower/BookPlayer
-3. On the device, from Telegram, send the book to the BookPlayer (via select-more-share-more-copy to BookPlayer). Enjoy!
+3. On the device, from Telegram, copy the book to the BookPlayer (via select-more-share-more-copy to BookPlayer). Enjoy!
