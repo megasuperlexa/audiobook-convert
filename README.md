@@ -1,4 +1,4 @@
-# Audiobook Convert - Manjaro-friendly
+# Audiobook Convert — Manjaro-friendly
 A shell script to convert mp3 to m4b files.
 
 ## Dependencies
