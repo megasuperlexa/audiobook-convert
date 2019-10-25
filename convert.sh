@@ -33,7 +33,10 @@ read response
 if echo -e "$response" | grep -iq "^y" ;
 then
 	echo "${green}Combining audiobook parts... ${reset}"
-	ffmpeg -i concat:"${parts}" -acodec copy output/output.mp3
+	ffmpeg -i concat:"${parts}" -acodec copy output/output0.mp3
+	for cover in input/*.png; do
+        ffmpeg -i output/output0.mp3 -i "${cover}" -map 0:0 -map 1:0 -c copy -id3v2_version 3 -metadata:s:v title="Album cover" -metadata:s:v comment="Cover (front)" output/output.mp3
+    done
 
 	if [ -f "$output_file" ]
 	then
@@ -42,6 +45,7 @@ then
 		if [[ -f "output/${filename}-converted.m4a" ]]; then
 			echo -e "${green}Renaming .m4a to .m4b... ${reset}"
 			rm -rf ${output_file}
+			rm -rf output/output0.mp3
 			cd output/ && rename m4a m4b *
 			mp4file --optimize *.m4b
 			echo "done"
