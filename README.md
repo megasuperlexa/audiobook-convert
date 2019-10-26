@@ -17,7 +17,7 @@ git clone https://github.com/megasuperlexa/audiobook-convert
 
 2. Running the script.
 
-Move all `.mp3` files to be combined and converted into `input/` (1-level folders supported too), add album cover (optional) - any .png file, if no files found then cover is taken from mp3.
+Move all `.mp3` files to be combined and converted into `input/` (1-level folders supported too), add album cover (optional) - any .png file, if no .png found then cover is taken from mp3.
 From the root folder of the repository, run:
 ```shell 
 sudo chmod +x convert.sh 
