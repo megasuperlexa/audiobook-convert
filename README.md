@@ -1,5 +1,5 @@
 # Audiobook Convert — Manjaro-friendly
-A shell script to convert mp3 to m4b files, album cover supported.
+A shell script to convert mp3 to m4b files, album cover supported, folders supported.
 
 ## Dependencies
 `audiobook-convert` uses `ffmpeg` and `rename`. For ffmpeg, make sure you have access to `libfdk_aac`.
@@ -17,7 +17,7 @@ git clone https://github.com/megasuperlexa/audiobook-convert
 
 2. Running the script.
 
-Move all `.mp3` files to be combined and converted into `input/`, add album cover (optional) - any .png file, if no files found then cover is taken from mp3.
+Move all `.mp3` files to be combined and converted into `input/` (1-level folders supported too), add album cover (optional) - any .png file, if no files found then cover is taken from mp3.
 From the root folder of the repository, run:
 ```shell 
 sudo chmod +x convert.sh 
