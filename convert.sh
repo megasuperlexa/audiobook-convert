@@ -34,8 +34,14 @@ if echo -e "$response" | grep -iq "^y" ;
 then
 	echo "${green}Combining audiobook parts... ${reset}"
 	ffmpeg -i concat:"${parts}" -acodec copy output/output0.mp3
-	for cover in input/*.png; do
-        ffmpeg -i output/output0.mp3 -i "${cover}" -map 0:0 -map 1:0 -c copy -id3v2_version 3 -metadata:s:v title="Album cover" -metadata:s:v comment="Cover (front)" output/output.mp3
+	for cover in input/*.png 
+	do
+        if [ -f "$cover" ] 
+        then
+            ffmpeg -i output/output0.mp3 -i "${cover}" -map 0:0 -map 1:0 -c copy -id3v2_version 3 -metadata:s:v title="Album cover" -metadata:s:v comment="Cover (front)" output/output.mp3
+        else
+            mv output/output0.mp3 output/output.mp3
+        fi
     done
 
 	if [ -f "$output_file" ]
