@@ -9,6 +9,20 @@ output_file="output/output.mp3"
 mkdir -p input
 mkdir -p output
 
+# flatten folders if any
+parent=./input
+newfolder=./input
+for folder in "$parent"/*; do
+  if [[ -d "$folder" ]]; then
+    foldername="${folder##*/}"
+    for file in "$parent"/"$foldername"/*; do
+      filename="${file##*/}"
+      newfilename="$foldername"_"$filename"
+      mv "$file" "$newfolder"/"$newfilename"
+    done
+  fi
+done
+
 echo -e "${green}Combining the following audiobook parts: ${reset}"
 for audiobook in input/*.mp3; do
 	# get audiobook name without the input prefix
