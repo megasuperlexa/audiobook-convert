@@ -1,4 +1,4 @@
-# Audiobook Convert — Manjaro-friendly
+# Audiobook Convert — Linux\Manjaro-friendly
 A shell script to convert mp3 to m4b files, album cover supported, folders supported.
 
 ## Dependencies
@@ -17,7 +17,7 @@ git clone https://github.com/megasuperlexa/audiobook-convert
 
 2. Running the script.
 
-Move all `.mp3` files to be combined and converted into `input/` (1-level folders supported too), add album cover (optional) - any .png file, if no .png found then cover is taken from mp3.
+Move all `.mp3` files to be combined and converted into `audiobook-convert/input/` (1-level folders with mp3 supported too), add album cover (optional) - any .png file, if no .png found then cover is taken from mp3.
 From the root folder of the repository, run:
 ```shell 
 sudo chmod +x convert.sh 
@@ -26,7 +26,7 @@ sudo chmod +x convert.sh
 
 ## How do I load my book to iPhone?
 
-I used to dual-boot to Windows and deal with iTunes and iBooks, which was not a pleasant experience, and sometimes, for unknown reasons, iBooks just won't play my book properly. Here's 100% Linux-friendly way (which doesnt require iTunes and wires at all):
+I used to dual-boot to Windows and deal with iTunes and iBooks, which was not exactly a pleasant experience, and sometimes, for unknown reasons, iBooks just won't play my book properly. Here's 100% Linux-friendly way (which doesnt require iTunes and wires at all):
 
 1. Send the m4b file to yourself via Telegram messenger (Saved Messages)
 2. On the device, install BookPlayer from AppStore. This is the nicest audiobook player I've seen, completely free and opensource: https://github.com/TortugaPower/BookPlayer
