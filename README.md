@@ -12,8 +12,9 @@ on a Mac, use
 ```shell
 brew tap homebrew-ffmpeg/ffmpeg
 brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac
+brew install mp4v2
 ```
-make sure to uninstall ffmpeg first (if installed from the official Homebrew core repository)
+make sure to uninstall ffmpeg first (if installed from the official Homebrew core repository, it does not have Fraunghofer codec)
 
 ## Instructions
 1. Clone the repo.
