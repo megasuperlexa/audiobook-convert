@@ -66,7 +66,10 @@ then
 			echo -e "${green}Renaming .m4a to .m4b... ${reset}"
 			rm -rf ${output_file}
 			rm -rf output/output0.mp3
-			cd output/ && rename m4a m4b *
+			cd output
+			for f in *.m4a; do
+			    mv "$f" "${f%.m4a}.m4b"
+			done
 			mp4file --optimize *.m4b
 			echo "done"
 		fi
