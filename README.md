@@ -2,7 +2,7 @@
 A shell script to convert mp3 to m4b files, album cover supported, folders supported.
 
 ## Dependencies
-`audiobook-convert` uses `ffmpeg` and `rename`. For ffmpeg, make sure you have access to `libfdk_aac`.
+`audiobook-convert` works on both Linux and Mac, uses `ffmpeg`. For ffmpeg, make sure you have access to `libfdk_aac`.
 ```shell
 sudo pikaur -Syu pod2man
 sudo pikaur -Syu ffmpeg-libfdk_aac
