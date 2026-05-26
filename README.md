@@ -8,6 +8,13 @@ sudo pikaur -Syu pod2man
 sudo pikaur -Syu ffmpeg-libfdk_aac
 ```
 
+on a Mac, use
+```shell
+brew tap homebrew-ffmpeg/ffmpeg
+brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac
+```
+make sure to uninstall ffmpeg first (if installed from the official Homebrew core repository)
+
 ## Instructions
 1. Clone the repo.
 
